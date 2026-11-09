@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ini website pertama ku</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #080d19, #14243d);
+    color: white;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero, .card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 22px;
+    padding: 35px;
+    margin-bottom: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    animation: muncul 0.7s ease;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.tag {
+    color: #64e3c1;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 55px);
+    margin: 25px 0 15px;
+}
+
+h1 span {
+    color: #64e3c1;
+}
+
+p {
+    line-height: 1.7;
+    color: #b7c3d6;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.info {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 18px;
+    border-radius: 15px;
+}
+
+.info small {
+    display: block;
+    color: #9baac1;
+    margin-bottom: 8px;
+}
+
+.info strong {
+    overflow-wrap: anywhere;
+}
+
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.hobby {
+    background: rgba(100,227,193,0.12);
+    border: 1px solid rgba(100,227,193,0.25);
+    color: #8df5d5;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background: #64e3c1;
+    color: #071b19;
+}
+
+.btn-secondary {
+    background: #8baeff;
+    color: #101a30;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px solid #52617a;
+    background: #101c30;
+    color: white;
+    font-size: 15px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #8291a9;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+.reply {
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 15px;
+    background: rgba(100,227,193,0.1);
+    border: 1px solid #64e3c155;
+    line-height: 1.8;
+}
+
+.reply h3 {
+    color: #64e3c1;
+    margin-bottom: 12px;
+}
+
+footer {
+    text-align: center;
+    color: #8291a9;
+    padding: 20px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:600px) {
+    .profile, .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+
+    .hero, .card {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- BAGIAN PEMBUKA -->
+    <section class="hero">
+        <div class="tag">PERSONAL WEBSITE</div>
+
+        <h1>
+            Perkenalkan nama saya
+            <span>Farell</span>
+        </h1>
+
+        <p>Ini website pertama ku</p>
+    </section>
+
+    <!-- PROFIL PRIBADI -->
+    <section class="card">
+
+        <h2>👋 Senang Berkenalan!</h2>
+
+        <p>
+            Halo! Aku Farell Bayu Purnama.
+            Berikut adalah profil singkat tentang diriku.
+        </p>
+
+        <div class="profile">
+
+            <div class="info">
+                <small>Nama Lengkap</small>
+                <strong>Farell Bayu Purnama</strong>
+            </div>
+
+            <div class="info">
+                <small>Kampus</small>
+                <strong>Politeknik Indonusa Surakarta</strong>
+            </div>
+
+            <div class="info">
+                <small>Jurusan</small>
+                <strong>TRPL</strong>
+            </div>
+
+            <div class="info">
+                <small>Semester</small>
+                <strong>1</strong>
+            </div>
+
+        </div>
+
+        <h3>Hal yang Aku Suka</h3>
+
+        <div class="hobbies">
+            <div class="hobby">🏸 Bulutangkis</div>
+            <div class="hobby">🏍️ Modifikasi Motor</div>
+            <div class="hobby">🎮 Bermain Game</div>
+        </div>
+
+        <p>
+            Aku lumayan jago bermain badminton,
+            walaupun tentunya masih harus terus latihan!
+        </p>
+
+        <br>
+
+        <button class="btn-secondary" id="whoButton">
+            Siapa Kamu? →
+        </button>
+
+    </section>
+
+    <!-- FORM PERKENALAN -->
+    <section class="card" id="formPanel" hidden>
+
+        <h2>✨ Yuk, Kenalan Denganmu!</h2>
+
+        <p>
+            Sekarang giliran kamu memperkenalkan diri.
+            Isi data berikut agar kita bisa saling mengenal.
+        </p>
+
+        <form id="introForm">
+
+            <div class="form-grid">
+
+                <div>
+                    <label>Nama</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama kamu"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label>Sekolah / Kampus</label>
+                    <input
+                        type="text"
+                        id="sekolah"
+                        placeholder="Nama sekolah atau kampus"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label>Jurusan / Kelas</label>
+                    <input
+                        type="text"
+                        id="jurusan"
+                        placeholder="Jurusan atau kelas"
+                    >
+                </div>
+
+                <div>
+                    <label>Hobi</label>
+                    <input
+                        type="text"
+                        id="hobi"
+                        placeholder="Apa hobi kamu?"
+                        required
+                    >
+                </div>
+
+                <div class="full">
+                    <label>Perkenalan Singkat</label>
+                    <textarea
+                        id="tentang"
+                        placeholder="Ceritakan sedikit tentang dirimu..."
+                    ></textarea>
+                </div>
+
+            </div>
+
+            <br>
+
+            <button class="btn-primary" type="submit">
+                Kirim Perkenalan →
+            </button>
+
+            <button class="btn-secondary" type="reset">
+                Kosongkan
+            </button>
+
+        </form>
+
+        <!-- TEMPAT BALASAN -->
+        <div class="reply" id="reply" hidden></div>
+
+    </section>
+
+    <footer>
+        Dibuat dengan semangat belajar oleh Farell ✨
+    </footer>
+
+</div>
+
+<script>
+
+// TOMBOL SIAPA KAMU
+const whoButton = document.getElementById("whoButton");
+const formPanel = document.getElementById("formPanel");
+
+whoButton.addEventListener("click", function() {
+
+    formPanel.hidden = false;
+
+    formPanel.scrollIntoView({
+        behavior: "smooth"
+    });
+
+});
+
+// FORM PERKENALAN
+const form = document.getElementById("introForm");
+const reply = document.getElementById("reply");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
+    const sekolah = document.getElementById("sekolah").value.trim();
+    const jurusan = document.getElementById("jurusan").value.trim();
+    const hobi = document.getElementById("hobi").value.trim();
+    const tentang = document.getElementById("tentang").value.trim();
+
+    reply.replaceChildren();
+
+    const heading = document.createElement("h3");
+    heading.textContent = "Halo, " + nama + "! 👋";
+    reply.appendChild(heading);
+
+    const greeting = document.createElement("p");
+    greeting.textContent =
+        "Terima kasih sudah mau berkenalan. Senang bisa mengenalmu!";
+    reply.appendChild(greeting);
+
+    const data = [
+        ["Sekolah / Kampus", sekolah],
+        ["Jurusan / Kelas", jurusan],
+        ["Hobi", hobi],
+        ["Tentang Kamu", tentang]
+    ];
+
+    data.forEach(function(item) {
+
+        if (item[1]) {
+            const p = document.createElement("p");
+            const strong = document.createElement("strong");
+
+            strong.textContent = item[0] + ": ";
+
+            p.appendChild(strong);
+            p.appendChild(document.createTextNode(item[1]));
+
+            reply.appendChild(p);
+        }
+
+    });
+
+    const closing = document.createElement("p");
+    closing.textContent =
+        "Salam kenal dari Farell! Semoga kita bisa berteman. 😊";
+
+    reply.appendChild(closing);
+
+    reply.hidden = false;
+
+    reply.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+});
+
+// RESET FORM
+form.addEventListener("reset", function() {
+    reply.hidden = true;
+    reply.replaceChildren();
+});
+
+</script>
+
+</body>
+</html>
